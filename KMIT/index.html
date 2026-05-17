@@ -5,25 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KMIT — Kabir Medical Institute of Technology | Tauru, Haryana</title>
   <meta name="description" content="Kabir Medical Institute of Technology (KMIT) — Premier medical education institute in Tauru, Nuh, Haryana 122105. Offering BMLT, DMLT, B.Pharma, GNM Nursing and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+<!-- OG / Meta -->
+<meta property="og:title" content="KMIT — Kabir Medical Institute of Technology" />
+<meta property="og:description" content="Premier medical education in Tauru, Haryana. BMLT, DMLT, B.Pharma, GNM Nursing & more." />
+<meta property="og:type" content="website" />
+
 <body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <div class="pl-icon">K</div>
+        <div class="pl-text">
+          <span class="pl-name">KMIT</span>
+          <span class="pl-sub">Medical Institute</span>
+        </div>
+      </div>
+      <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+      <div class="preloader-pct" id="preloaderPct">0%</div>
+    </div>
+  </div>
+
+  <!-- ===== ANNOUNCEMENT TICKER ===== -->
+  <div class="announce-bar" id="announceBar">
+    <div class="announce-inner">
+      <span class="announce-live">LIVE</span>
+      <div class="ticker-wrap">
+        <div class="ticker-track">
+          <span>🎓 Admissions Open 2026–27 — Limited Seats Available</span>
+          <span class="sep">|</span>
+          <span>📋 Last Date to Apply: 31 July 2026</span>
+          <span class="sep">|</span>
+          <span>🏆 KMIT Ranked Among Top Medical Institutes in Haryana</span>
+          <span class="sep">|</span>
+          <span>🔬 New Radiology Lab Inaugurated This Session</span>
+          <span class="sep">|</span>
+          <span>📞 Call for Admissions: +91 98765 43210</span>
+          <span class="sep">|</span>
+          <span>🎓 Admissions Open 2026–27 — Limited Seats Available</span>
+          <span class="sep">|</span>
+          <span>📋 Last Date to Apply: 31 July 2026</span>
+          <span class="sep">|</span>
+          <span>🏆 KMIT Ranked Among Top Medical Institutes in Haryana</span>
+          <span class="sep">|</span>
+          <span>🔬 New Radiology Lab Inaugurated This Session</span>
+          <span class="sep">|</span>
+          <span>📞 Call for Admissions: +91 98765 43210</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#" class="nav-logo">
+      <a href="#home" class="nav-logo">
         <div class="nav-logo-icon">K</div>
         <div class="nav-logo-text">
-          <span>KMIT</span>
-          <span>Medical Institute</span>
+          <span class="logo-name">KMIT</span>
+          <span class="logo-sub">Medical Institute</span>
         </div>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#courses">Courses</a></li>
+        <li><a href="#admissions">Admissions</a></li>
         <li><a href="#facilities">Facilities</a></li>
-        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#contact" class="nav-cta">Apply Now</a></li>
@@ -34,78 +88,161 @@
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero">
+  <!-- ===== HERO WITH IMAGE SLIDER ===== -->
+  <section class="hero" id="home">
+    <!-- Background image slider -->
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active">
+        <img src="images/campus.png" alt="KMIT Green Campus">
+        <div class="slide-label">Our Sprawling Green Campus</div>
+      </div>
+      <div class="hero-slide">
+        <img src="images/lab.png" alt="Advanced Laboratories">
+        <div class="slide-label">World-Class Laboratories</div>
+      </div>
+      <div class="hero-slide">
+        <img src="images/hospital.png" alt="Hospital Clinical Training">
+        <div class="slide-label">Clinical Hospital Training</div>
+      </div>
+      <div class="hero-slide">
+        <img src="images/library.png" alt="Digital Library">
+        <div class="slide-label">Digital Knowledge Centre</div>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
     <div class="hero-particles" id="particles"></div>
+
+    <!-- Slider progress bar -->
+    <div class="slider-progress"><div class="slider-progress-fill" id="sliderProgress"></div></div>
+
+    <!-- Hero Content -->
     <div class="hero-content">
       <div class="hero-badge">
-        <span class="dot"></span> Admissions Open 2026-27
+        <span class="badge-dot"></span>
+        Admissions Open 2026–27
       </div>
-      <h1>Kabir Medical<br/>Institute of <span class="highlight">Technology</span></h1>
-      <p class="hero-subtitle">Empowering future healthcare leaders with world-class medical education, cutting-edge research facilities, and a commitment to clinical excellence.</p>
+      <h1 class="hero-title">
+        Kabir Medical<br>
+        Institute of <em>Technology</em>
+      </h1>
+      <p class="hero-subtitle">
+        Empowering future healthcare leaders with world-class medical education, cutting-edge research, and clinical excellence since 2010.
+      </p>
       <p class="hero-location">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         Tauru, District Nuh, Haryana — 122105
       </p>
       <div class="hero-buttons">
         <a href="#courses" class="btn btn-primary">
           Explore Courses
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        <a href="#contact" class="btn btn-glass">Get In Touch</a>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="num">15<span>+</span></div>
-          <div class="label">Years Legacy</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">5K<span>+</span></div>
-          <div class="label">Alumni</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">50<span>+</span></div>
-          <div class="label">Expert Faculty</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">95<span>%</span></div>
-          <div class="label">Placement</div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="hero-statsbar">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-num" data-target="15" data-suffix="+">0+</div>
+            <div class="stat-lbl">Years of Legacy</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="5000" data-suffix="+">0+</div>
+            <div class="stat-lbl">Alumni Network</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="50" data-suffix="+">0+</div>
+            <div class="stat-lbl">Expert Faculty</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="95" data-suffix="%">0%</div>
+            <div class="stat-lbl">Placement Rate</div>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="6" data-suffix="">0</div>
+            <div class="stat-lbl">Programs Offered</div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Slider Controls -->
+    <div class="slider-controls">
+      <button class="slider-dot active" data-slide="0"></button>
+      <button class="slider-dot" data-slide="1"></button>
+      <button class="slider-dot" data-slide="2"></button>
+      <button class="slider-dot" data-slide="3"></button>
+    </div>
+    <button class="slider-arrow prev" id="sliderPrev" aria-label="Previous slide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    </button>
+    <button class="slider-arrow next" id="sliderNext" aria-label="Next slide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
   </section>
 
   <!-- ===== ABOUT ===== -->
   <section class="section about" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-image reveal">
-          <img src="images/campus.png" alt="KMIT Campus Aerial View" />
-          <div class="about-badge-float">Est. 2010</div>
+        <div class="about-visual reveal">
+          <div class="about-img-main-wrap">
+            <img src="images/campus.png" alt="KMIT Campus">
+          </div>
+          <div class="about-img-secondary-wrap">
+            <img src="images/lab.png" alt="KMIT Labs">
+          </div>
+          <div class="about-est-badge">
+            <div class="est-num">15</div>
+            <div class="est-text">Years of<br>Excellence</div>
+          </div>
         </div>
         <div class="about-text reveal">
           <div class="section-label">About KMIT</div>
-          <h2>Shaping the Future of <span class="highlight">Healthcare</span></h2>
-          <p>Kabir Medical Institute of Technology (KMIT) is a premier healthcare education institution located in the heart of Tauru, Nuh District, Haryana. Founded with a vision to bridge the gap in quality medical education in rural India, KMIT has grown into a beacon of academic excellence and clinical expertise.</p>
-          <p>Our state-of-the-art campus, affiliated with leading universities, provides students with an immersive learning environment that blends theoretical knowledge with hands-on practical training in modern laboratories and clinical settings.</p>
-          <div class="about-features">
-            <div class="about-feature">
-              <div class="about-feature-icon">🏛️</div>
-              <span>University Affiliated</span>
+          <h2>Shaping the Future of <span class="text-gold">Healthcare</span></h2>
+          <p>Kabir Medical Institute of Technology (KMIT) is a premier healthcare education institution in Tauru, Nuh District, Haryana. Founded with a vision to bridge the gap in quality medical education, KMIT has grown into a beacon of academic excellence and clinical expertise.</p>
+          <p>Our state-of-the-art campus provides students with an immersive environment that blends theoretical knowledge with hands-on practical training in modern laboratories and clinical settings.</p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">🏛️</div>
+              <div>
+                <div class="pillar-title">University Affiliated</div>
+                <div class="pillar-sub">Recognized by leading universities</div>
+              </div>
             </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">🔬</div>
-              <span>Modern Labs</span>
+            <div class="pillar">
+              <div class="pillar-icon">🔬</div>
+              <div>
+                <div class="pillar-title">Modern Laboratories</div>
+                <div class="pillar-sub">State-of-the-art equipment</div>
+              </div>
             </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">📚</div>
-              <span>Digital Library</span>
+            <div class="pillar">
+              <div class="pillar-icon">📚</div>
+              <div>
+                <div class="pillar-title">Digital Library</div>
+                <div class="pillar-sub">Vast medical literature</div>
+              </div>
             </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">🏥</div>
-              <span>Hospital Training</span>
+            <div class="pillar">
+              <div class="pillar-icon">🏥</div>
+              <div>
+                <div class="pillar-title">Hospital Training</div>
+                <div class="pillar-sub">Real clinical experience</div>
+              </div>
             </div>
           </div>
+          <a href="#courses" class="btn btn-primary">
+            Explore Our Programs
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -121,52 +258,195 @@
       </div>
       <div class="courses-grid">
         <div class="course-card reveal">
-          <div class="course-icon">🔬</div>
-          <h3>B.Sc. Medical Lab Technology (BMLT)</h3>
-          <p>A 3-year undergraduate program training students in advanced clinical laboratory diagnostics, pathology, and biomedical analysis.</p>
-          <div class="course-meta">
-            <span>3 Years</span><span>Degree</span>
+          <div class="course-top">
+            <div class="course-icon-box">🔬</div>
+            <div class="course-badge">Most Popular</div>
+          </div>
+          <h3>B.Sc. Medical Lab Technology</h3>
+          <p class="course-abbr">BMLT</p>
+          <p class="course-desc">3-year undergraduate program training students in advanced clinical laboratory diagnostics, pathology, and biomedical analysis.</p>
+          <div class="course-footer">
+            <div class="course-tags">
+              <span>3 Years</span>
+              <span>Degree</span>
+            </div>
+            <a href="#contact" class="course-cta">Apply <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
+
         <div class="course-card reveal">
-          <div class="course-icon">🧪</div>
-          <h3>Diploma in Medical Lab Technology (DMLT)</h3>
-          <p>A 2-year diploma program focusing on essential lab techniques, sample analysis, and diagnostic procedures for healthcare settings.</p>
-          <div class="course-meta">
-            <span>2 Years</span><span>Diploma</span>
+          <div class="course-top">
+            <div class="course-icon-box">🧪</div>
+          </div>
+          <h3>Diploma in Medical Lab Technology</h3>
+          <p class="course-abbr">DMLT</p>
+          <p class="course-desc">2-year diploma focusing on essential lab techniques, sample analysis, and diagnostic procedures for healthcare settings.</p>
+          <div class="course-footer">
+            <div class="course-tags">
+              <span>2 Years</span>
+              <span>Diploma</span>
+            </div>
+            <a href="#contact" class="course-cta">Apply <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
+
         <div class="course-card reveal">
-          <div class="course-icon">💊</div>
-          <h3>Bachelor of Pharmacy (B.Pharma)</h3>
-          <p>A 4-year professional degree in pharmaceutical sciences covering drug formulation, pharmacology, and clinical pharmacy practices.</p>
-          <div class="course-meta">
-            <span>4 Years</span><span>Degree</span>
+          <div class="course-top">
+            <div class="course-icon-box">💊</div>
+            <div class="course-badge gold">4 Year</div>
+          </div>
+          <h3>Bachelor of Pharmacy</h3>
+          <p class="course-abbr">B.Pharma</p>
+          <p class="course-desc">4-year professional degree in pharmaceutical sciences covering drug formulation, pharmacology, and clinical pharmacy practices.</p>
+          <div class="course-footer">
+            <div class="course-tags">
+              <span>4 Years</span>
+              <span>Degree</span>
+            </div>
+            <a href="#contact" class="course-cta">Apply <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
+
         <div class="course-card reveal">
-          <div class="course-icon">🩺</div>
+          <div class="course-top">
+            <div class="course-icon-box">🩺</div>
+          </div>
           <h3>GNM Nursing</h3>
-          <p>A 3-year General Nursing & Midwifery program preparing compassionate, skilled nurses for hospitals and community care.</p>
-          <div class="course-meta">
-            <span>3 Years</span><span>Diploma</span>
+          <p class="course-abbr">General Nursing &amp; Midwifery</p>
+          <p class="course-desc">3-year program preparing compassionate, skilled nurses for hospitals and community care with strong clinical foundation.</p>
+          <div class="course-footer">
+            <div class="course-tags">
+              <span>3 Years</span>
+              <span>Diploma</span>
+            </div>
+            <a href="#contact" class="course-cta">Apply <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
+
         <div class="course-card reveal">
-          <div class="course-icon">🫀</div>
+          <div class="course-top">
+            <div class="course-icon-box">🫀</div>
+          </div>
           <h3>B.Sc. Cardiac Care Technology</h3>
-          <p>Specialized 3-year program in cardiac diagnostics, ECG interpretation, echocardiography, and cardiovascular patient management.</p>
-          <div class="course-meta">
-            <span>3 Years</span><span>Degree</span>
+          <p class="course-abbr">CCT</p>
+          <p class="course-desc">Specialized 3-year program in cardiac diagnostics, ECG, echocardiography, and cardiovascular patient management.</p>
+          <div class="course-footer">
+            <div class="course-tags">
+              <span>3 Years</span>
+              <span>Degree</span>
+            </div>
+            <a href="#contact" class="course-cta">Apply <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
+
         <div class="course-card reveal">
-          <div class="course-icon">📡</div>
-          <h3>B.Sc. Radiology &amp; Imaging</h3>
-          <p>A 3-year program covering X-ray, CT scan, MRI, and ultrasound imaging technologies for advanced medical diagnostics.</p>
-          <div class="course-meta">
-            <span>3 Years</span><span>Degree</span>
+          <div class="course-top">
+            <div class="course-icon-box">📡</div>
           </div>
+          <h3>B.Sc. Radiology &amp; Imaging</h3>
+          <p class="course-abbr">Radiology</p>
+          <p class="course-desc">3-year program covering X-ray, CT scan, MRI, and ultrasound imaging technologies for advanced medical diagnostics.</p>
+          <div class="course-footer">
+            <div class="course-tags">
+              <span>3 Years</span>
+              <span>Degree</span>
+            </div>
+            <a href="#contact" class="course-cta">Apply <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ADMISSIONS (NEW) ===== -->
+  <section class="section admissions" id="admissions">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Join KMIT</div>
+        <h2>Admission Process</h2>
+        <p>A simple, transparent process to help you begin your journey at KMIT.</p>
+      </div>
+      <div class="admission-steps reveal">
+        <div class="adm-step">
+          <div class="adm-step-num">01</div>
+          <div class="adm-step-body">
+            <div class="adm-icon">📝</div>
+            <h3>Submit Application</h3>
+            <p>Fill the application form online or visit campus with your academic details.</p>
+          </div>
+        </div>
+        <div class="adm-connector"></div>
+        <div class="adm-step">
+          <div class="adm-step-num">02</div>
+          <div class="adm-step-body">
+            <div class="adm-icon">📄</div>
+            <h3>Document Verification</h3>
+            <p>Submit marksheets, ID proof, photos, and category certificates for verification.</p>
+          </div>
+        </div>
+        <div class="adm-connector"></div>
+        <div class="adm-step">
+          <div class="adm-step-num">03</div>
+          <div class="adm-step-body">
+            <div class="adm-icon">🏆</div>
+            <h3>Merit Selection</h3>
+            <p>Shortlisting based on academic merit. Receive your offer letter via email/SMS.</p>
+          </div>
+        </div>
+        <div class="adm-connector"></div>
+        <div class="adm-step">
+          <div class="adm-step-num">04</div>
+          <div class="adm-step-body">
+            <div class="adm-icon">💳</div>
+            <h3>Fee Payment</h3>
+            <p>Pay admission fee online or via DD. Scholarships available for eligible students.</p>
+          </div>
+        </div>
+        <div class="adm-connector"></div>
+        <div class="adm-step">
+          <div class="adm-step-num">05</div>
+          <div class="adm-step-body">
+            <div class="adm-icon">🎓</div>
+            <h3>Enrollment</h3>
+            <p>Collect your ID card, welcome kit, and begin your healthcare education journey!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="adm-info-grid reveal">
+        <div class="adm-info-card">
+          <h4>Eligibility Criteria</h4>
+          <ul>
+            <li>✅ 10+2 with Science (PCB/PCM) for degree programs</li>
+            <li>✅ Minimum 45% marks (40% for reserved categories)</li>
+            <li>✅ 10+2 with any stream for DMLT &amp; GNM</li>
+            <li>✅ Age: 17–25 years at time of admission</li>
+          </ul>
+        </div>
+        <div class="adm-info-card">
+          <h4>Documents Required</h4>
+          <ul>
+            <li>📄 10th &amp; 12th Mark Sheets &amp; Certificate</li>
+            <li>📄 Migration Certificate</li>
+            <li>📄 Character Certificate from last institution</li>
+            <li>📄 6 Passport-size Photographs</li>
+            <li>📄 Aadhar Card / Voter ID</li>
+            <li>📄 Category Certificate (if applicable)</li>
+          </ul>
+        </div>
+        <div class="adm-info-card featured">
+          <div class="featured-glow"></div>
+          <h4>Important Dates 2026</h4>
+          <ul>
+            <li>🗓️ <strong>Application Opens:</strong> 1 April 2026</li>
+            <li>🗓️ <strong>Last Date to Apply:</strong> 31 July 2026</li>
+            <li>🗓️ <strong>Merit List:</strong> 10 August 2026</li>
+            <li>🗓️ <strong>Session Begins:</strong> 1 September 2026</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary" style="margin-top:24px; width:100%; justify-content:center;">
+            Apply Now
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -181,32 +461,38 @@
         <p>Our campus is equipped with modern infrastructure designed to provide an exceptional learning experience.</p>
       </div>
       <div class="facilities-grid">
-        <div class="facility-card reveal">
-          <img src="images/lab.png" alt="Advanced Laboratory" />
+        <div class="facility-card tall reveal">
+          <img src="images/campus.png" alt="KMIT Campus">
           <div class="facility-overlay">
-            <h3>Advanced Laboratories</h3>
-            <p>Fully equipped pathology, biochemistry & microbiology labs</p>
-          </div>
-        </div>
-        <div class="facility-card reveal">
-          <img src="images/library.png" alt="Digital Library" />
-          <div class="facility-overlay">
-            <h3>Digital Library</h3>
-            <p>Vast collection of medical journals, e-books & research databases</p>
-          </div>
-        </div>
-        <div class="facility-card reveal">
-          <img src="images/hospital.png" alt="Hospital Training" />
-          <div class="facility-overlay">
-            <h3>Hospital Training</h3>
-            <p>Clinical rotations in affiliated multi-specialty hospitals</p>
-          </div>
-        </div>
-        <div class="facility-card reveal">
-          <img src="images/campus.png" alt="Campus Life" />
-          <div class="facility-overlay">
+            <span class="fac-tag">Campus</span>
             <h3>Green Campus</h3>
-            <p>Sprawling campus with hostels, sports & recreation facilities</p>
+            <p>Sprawling campus with hostels, sports courts &amp; recreation facilities</p>
+          </div>
+        </div>
+        <div class="facilities-right">
+          <div class="facility-card reveal">
+            <img src="images/lab.png" alt="Advanced Laboratory">
+            <div class="facility-overlay">
+              <span class="fac-tag">Labs</span>
+              <h3>Advanced Laboratories</h3>
+              <p>Fully equipped pathology, biochemistry &amp; microbiology labs</p>
+            </div>
+          </div>
+          <div class="facility-card reveal">
+            <img src="images/library.png" alt="Digital Library">
+            <div class="facility-overlay">
+              <span class="fac-tag">Library</span>
+              <h3>Digital Library</h3>
+              <p>Vast medical journals, e-books &amp; research databases</p>
+            </div>
+          </div>
+          <div class="facility-card reveal">
+            <img src="images/hospital.png" alt="Hospital Training">
+            <div class="facility-overlay">
+              <span class="fac-tag">Clinical</span>
+              <h3>Hospital Training</h3>
+              <p>Clinical rotations in affiliated multi-specialty hospitals</p>
+            </div>
           </div>
         </div>
       </div>
@@ -219,38 +505,77 @@
       <div class="section-header reveal">
         <div class="section-label">Advantages</div>
         <h2>Why Choose KMIT?</h2>
-        <p>We provide a holistic educational experience that goes beyond textbooks to shape well-rounded healthcare professionals.</p>
+        <p>We provide a holistic educational experience that shapes well-rounded healthcare professionals.</p>
       </div>
       <div class="why-grid">
         <div class="why-card reveal">
-          <div class="why-icon">🎓</div>
+          <div class="why-icon-wrap">🎓</div>
           <h3>Experienced Faculty</h3>
-          <p>Learn from 50+ experienced professors, doctors, and industry professionals with decades of clinical and teaching expertise.</p>
+          <p>Learn from 50+ professors, doctors, and industry professionals with decades of clinical and teaching expertise.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon">🏆</div>
+          <div class="why-icon-wrap">🏆</div>
           <h3>95% Placement Rate</h3>
-          <p>Our dedicated placement cell ensures students land positions in top hospitals, diagnostic labs, and pharmaceutical companies.</p>
+          <p>Our dedicated placement cell ensures students land positions in top hospitals, labs, and pharma companies.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon">💻</div>
+          <div class="why-icon-wrap">💻</div>
           <h3>Smart Classrooms</h3>
-          <p>Interactive smart classrooms with digital boards, projectors, and AI-powered learning tools for an immersive education experience.</p>
+          <p>Interactive classrooms with digital boards, projectors, and AI-powered learning tools for immersive education.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon">🤝</div>
+          <div class="why-icon-wrap">🤝</div>
           <h3>Industry Partnerships</h3>
-          <p>MoUs with leading hospitals and healthcare companies for internships, live projects, and seamless career transitions.</p>
+          <p>MoUs with leading hospitals and healthcare companies for internships and seamless career transitions.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon">💰</div>
+          <div class="why-icon-wrap">💰</div>
           <h3>Affordable Fees</h3>
-          <p>Quality medical education at competitive fees with scholarship programs for meritorious and economically weaker students.</p>
+          <p>Quality medical education at competitive fees with scholarship programs for meritorious students.</p>
         </div>
         <div class="why-card reveal">
-          <div class="why-icon">🏠</div>
-          <h3>Hostel & Transport</h3>
-          <p>Separate boys & girls hostels with 24/7 security, mess facilities, and transport connectivity to nearby cities.</p>
+          <div class="why-icon-wrap">🏠</div>
+          <h3>Hostel &amp; Transport</h3>
+          <p>Separate boys &amp; girls hostels with 24/7 security, mess facilities, and transport to nearby cities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY (NEW) ===== -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Campus Life</div>
+        <h2>Life at KMIT</h2>
+        <p>Glimpses of our vibrant campus, state-of-the-art facilities, and student life at KMIT.</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item gi-large">
+          <img src="images/campus.png" alt="Campus Overview">
+          <div class="gallery-hover">
+            <span>Campus Overview</span>
+          </div>
+        </div>
+        <div class="gallery-col">
+          <div class="gallery-item">
+            <img src="images/lab.png" alt="Advanced Lab">
+            <div class="gallery-hover"><span>Advanced Lab</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/library.png" alt="Digital Library">
+            <div class="gallery-hover"><span>Digital Library</span></div>
+          </div>
+        </div>
+        <div class="gallery-col">
+          <div class="gallery-item">
+            <img src="images/hospital.png" alt="Hospital Training">
+            <div class="gallery-hover"><span>Hospital Training</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/campus.png" alt="Campus Grounds">
+            <div class="gallery-hover"><span>Campus Grounds</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -260,70 +585,107 @@
   <section class="section testimonials" id="testimonials">
     <div class="container">
       <div class="section-header reveal">
-        <div class="section-label">Testimonials</div>
+        <div class="section-label">Student Stories</div>
         <h2>What Our Students Say</h2>
-        <p>Hear from our alumni and current students about their experience at KMIT.</p>
+        <p>Hear from our alumni and current students about their transformative experience at KMIT.</p>
       </div>
-      <div class="testimonials-slider reveal">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"KMIT transformed my career. The practical training in the labs was exceptional, and the faculty guided me every step of the way. I'm now working at a top diagnostic center in Delhi."</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">A</div>
-            <div class="testimonial-info">
-              <div class="name">Aisha Khan</div>
-              <div class="role">BMLT Graduate, 2024</div>
+      <div class="testi-outer reveal">
+        <div class="testi-track" id="testiTrack">
+          <div class="testi-card">
+            <div class="testi-quote">"</div>
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>KMIT transformed my career. The practical training in the labs was exceptional, and the faculty guided me every step. I'm now working at a top diagnostic center in Delhi.</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">AK</div>
+              <div>
+                <div class="testi-name">Aisha Khan</div>
+                <div class="testi-role">BMLT Graduate, 2024</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-quote">"</div>
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>The B.Pharma program is incredibly well-structured. The combination of theory and pharmacy practice sessions prepared me thoroughly for the pharmaceutical industry.</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">RS</div>
+              <div>
+                <div class="testi-name">Rahul Sharma</div>
+                <div class="testi-role">B.Pharma Graduate, 2023</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-quote">"</div>
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>As a GNM Nursing student, I received outstanding clinical exposure. The hospital rotations were invaluable, and I felt fully prepared when I started my nursing career.</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">PY</div>
+              <div>
+                <div class="testi-name">Priya Yadav</div>
+                <div class="testi-role">GNM Nursing, 2024</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-quote">"</div>
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>The campus environment is perfect for focused learning. The library, smart classrooms, and supportive faculty make KMIT one of the best medical institutes in the region.</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">MF</div>
+              <div>
+                <div class="testi-name">Mohammed Faisal</div>
+                <div class="testi-role">DMLT Graduate, 2025</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-quote">"</div>
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>The Radiology program gave hands-on experience with real CT and MRI machines. The placement team secured me a role at a leading diagnostic centre within 2 weeks of graduation.</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">SK</div>
+              <div>
+                <div class="testi-name">Sahil Kumar</div>
+                <div class="testi-role">B.Sc. Radiology, 2025</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"The B.Pharma program at KMIT is incredibly well-structured. The combination of theory and pharmacy practice sessions prepared me thoroughly for the pharmaceutical industry."</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">R</div>
-            <div class="testimonial-info">
-              <div class="name">Rahul Sharma</div>
-              <div class="role">B.Pharma Graduate, 2023</div>
-            </div>
-          </div>
+      </div>
+      <div class="testi-controls">
+        <button class="tctrl-arrow" id="tPrev" aria-label="Previous">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        </button>
+        <div class="tctrl-dots" id="tDots">
+          <span class="tdot active"></span>
+          <span class="tdot"></span>
+          <span class="tdot"></span>
+          <span class="tdot"></span>
+          <span class="tdot"></span>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"As a GNM Nursing student, I received outstanding clinical exposure. The hospital rotations were invaluable, and I felt fully prepared when I started my nursing career."</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">P</div>
-            <div class="testimonial-info">
-              <div class="name">Priya Yadav</div>
-              <div class="role">GNM Nursing, 2024</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"The campus environment is perfect for focused learning. The library, smart classrooms, and supportive faculty make KMIT one of the best medical institutes in the region."</blockquote>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">M</div>
-            <div class="testimonial-info">
-              <div class="name">Mohammed Faisal</div>
-              <div class="role">DMLT Graduate, 2025</div>
-            </div>
-          </div>
-        </div>
+        <button class="tctrl-arrow" id="tNext" aria-label="Next">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
+  <!-- ===== CTA BANNER ===== -->
   <section class="cta-section">
+    <div class="cta-bg-img" style="background-image:url('images/campus.png')"></div>
+    <div class="cta-overlay"></div>
     <div class="container">
       <div class="cta-content reveal">
+        <div class="cta-badge">Limited Seats Available</div>
         <h2>Begin Your Journey in Healthcare</h2>
-        <p>Admissions are now open for 2026-27. Secure your future in the ever-growing medical and paramedical field. Limited seats available.</p>
+        <p>Admissions are now open for 2026–27. Secure your future in the ever-growing medical and paramedical field.</p>
         <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Apply for Admission
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <a href="#contact" class="btn btn-primary">
+            Apply for Admission
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="tel:+911234567890" class="btn btn-outline">📞 Call Now</a>
+          <a href="tel:+919876543210" class="btn btn-glass">📞 Call Now</a>
         </div>
       </div>
     </div>
@@ -334,40 +696,45 @@
     <div class="container">
       <div class="section-header reveal">
         <div class="section-label">Get In Touch</div>
-        <h2>Contact Us</h2>
-        <p>Have questions? Reach out to us and our admissions team will guide you through the enrollment process.</p>
+        <h2>Contact &amp; Admissions</h2>
+        <p>Have questions? Reach out and our admissions team will guide you through the enrollment process.</p>
       </div>
       <div class="contact-grid">
-        <div class="reveal">
-          <div class="contact-info-list">
-            <div class="contact-item">
-              <div class="contact-item-icon">📍</div>
-              <div>
-                <h4>Campus Address</h4>
-                <p>Kabir Medical Institute of Technology,<br/>Tauru, District Nuh, Haryana — 122105</p>
-              </div>
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <div class="contact-icon-box">📍</div>
+            <div>
+              <h4>Campus Address</h4>
+              <p>Kabir Medical Institute of Technology,<br>Tauru, District Nuh, Haryana — 122105</p>
             </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">📞</div>
-              <div>
-                <h4>Phone</h4>
-                <p>+91 98765 43210<br/>+91 12345 67890</p>
-              </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-box">📞</div>
+            <div>
+              <h4>Phone Numbers</h4>
+              <p>+91 98765 43210<br>+91 12345 67890</p>
             </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">✉️</div>
-              <div>
-                <h4>Email</h4>
-                <p>admissions@kmit.edu.in<br/>info@kmit.edu.in</p>
-              </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-box">✉️</div>
+            <div>
+              <h4>Email Addresses</h4>
+              <p>admissions@kmit.edu.in<br>info@kmit.edu.in</p>
             </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">🕐</div>
-              <div>
-                <h4>Office Hours</h4>
-                <p>Monday – Saturday: 9:00 AM – 5:00 PM<br/>Sunday: Closed</p>
-              </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon-box">🕐</div>
+            <div>
+              <h4>Office Hours</h4>
+              <p>Monday – Saturday: 9:00 AM – 5:00 PM<br>Sunday: Closed</p>
             </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="soc-btn" aria-label="Facebook">f</a>
+            <a href="#" class="soc-btn" aria-label="Instagram">📷</a>
+            <a href="#" class="soc-btn" aria-label="YouTube">▶</a>
+            <a href="#" class="soc-btn" aria-label="WhatsApp">💬</a>
+            <a href="#" class="soc-btn" aria-label="LinkedIn">in</a>
           </div>
         </div>
         <div class="reveal">
@@ -375,7 +742,7 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your name" required />
+                <input type="text" id="name" placeholder="Enter your full name" required />
               </div>
               <div class="form-group">
                 <label for="phone">Phone Number</label>
@@ -395,16 +762,16 @@
                 <option value="bpharma">Bachelor of Pharmacy (B.Pharma)</option>
                 <option value="gnm">GNM Nursing</option>
                 <option value="cardiac">B.Sc. Cardiac Care Technology</option>
-                <option value="radiology">B.Sc. Radiology & Imaging</option>
+                <option value="radiology">B.Sc. Radiology &amp; Imaging</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" placeholder="Your message or questions..."></textarea>
+              <textarea id="message" placeholder="Your questions or message..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
               Submit Enquiry
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
           </form>
         </div>
@@ -414,58 +781,62 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#" class="nav-logo">
-            <div class="nav-logo-icon">K</div>
-            <div class="nav-logo-text">
-              <span>KMIT</span>
-              <span>Medical Institute</span>
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#home" class="nav-logo" style="margin-bottom:16px;">
+              <div class="nav-logo-icon">K</div>
+              <div class="nav-logo-text">
+                <span class="logo-name">KMIT</span>
+                <span class="logo-sub">Medical Institute</span>
+              </div>
+            </a>
+            <p>Kabir Medical Institute of Technology is committed to nurturing the next generation of healthcare professionals through quality education, innovation, and compassion.</p>
+            <div class="footer-contact-brief">
+              <span>📍 Tauru, Nuh, Haryana 122105</span>
+              <span>📞 +91 98765 43210</span>
             </div>
-          </a>
-          <p>Kabir Medical Institute of Technology is committed to nurturing the next generation of healthcare professionals through quality education, innovation, and compassion.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#facilities">Facilities</a></li>
-            <li><a href="#why-us">Why KMIT</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Courses</h4>
-          <ul>
-            <li><a href="#courses">BMLT</a></li>
-            <li><a href="#courses">DMLT</a></li>
-            <li><a href="#courses">B.Pharma</a></li>
-            <li><a href="#courses">GNM Nursing</a></li>
-            <li><a href="#courses">Cardiac Care</a></li>
-            <li><a href="#courses">Radiology</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="#">WhatsApp</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#courses">Courses</a></li>
+              <li><a href="#admissions">Admissions</a></li>
+              <li><a href="#facilities">Facilities</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Our Programs</h4>
+            <ul>
+              <li><a href="#courses">BMLT</a></li>
+              <li><a href="#courses">DMLT</a></li>
+              <li><a href="#courses">B.Pharma</a></li>
+              <li><a href="#courses">GNM Nursing</a></li>
+              <li><a href="#courses">Cardiac Care Technology</a></li>
+              <li><a href="#courses">Radiology &amp; Imaging</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Connect With Us</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="#">WhatsApp</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
         <p>&copy; 2026 Kabir Medical Institute of Technology. All rights reserved.</p>
-        <div class="footer-socials">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="Instagram">📷</a>
-          <a href="#" aria-label="YouTube">▶</a>
-          <a href="#" aria-label="WhatsApp">💬</a>
-        </div>
+        <p class="footer-tagline">Empowering Healthcare Excellence Since 2010</p>
       </div>
     </div>
   </footer>
