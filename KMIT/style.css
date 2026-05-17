@@ -1116,3 +1116,120 @@ a { text-decoration: none; }
 .section-label::after  { animation: lineGrow 0.8s 0.15s ease both; }
 @keyframes lineGrow { from { width: 0; } to { width: 28px; } }
 
+/* ===== COURSE CARDS — extra polish ===== */
+.course-card {
+  background: linear-gradient(160deg, var(--bg-3) 0%, var(--bg-2) 100%);
+}
+.course-card:hover h3 { color: var(--blue-300); }
+.course-card:hover .course-abbr { color: var(--cyan-light); }
+
+/* ===== WHY CARD — numbered gradient number ===== */
+.why-card { counter-increment: whyCount; }
+.why-grid { counter-reset: whyCount; }
+.why-icon-wrap { position: relative; }
+.why-icon-wrap::after {
+  content: counter(whyCount, decimal-leading-zero);
+  position: absolute; top: -8px; right: -8px;
+  font-size: 11px; font-weight: 800; color: var(--cyan);
+  background: var(--bg-1); border: 1px solid var(--border-blue);
+  width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Inter', sans-serif; letter-spacing: -0.5px;
+}
+
+/* ===== ADM STEP — glowing number ===== */
+.adm-step-num {
+  background: var(--grad-primary);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem; font-weight: 800; letter-spacing: 0;
+}
+
+/* ===== ABOUT — image border glow on hover ===== */
+.about-img-main-wrap:hover {
+  box-shadow: 0 0 0 2px var(--blue-500), var(--shadow-lg);
+  transition: box-shadow 0.4s ease;
+}
+
+/* ===== CTA btn pulse ===== */
+.cta-content .btn-primary {
+  animation: ctaPulse 3s ease-in-out infinite;
+}
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: var(--shadow-blue); }
+  50% { box-shadow: 0 16px 50px rgba(37,99,235,0.6), 0 0 0 8px rgba(37,99,235,0.08); }
+}
+
+/* ===== MOBILE NAV — overlay ===== */
+@media (max-width: 768px) {
+  .nav-links.active::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: rgba(4,8,15,0.5);
+    z-index: -1;
+  }
+}
+
+/* ===== SCROLL HINT — hide on mobile ===== */
+@media (max-width: 768px) {
+  .hero-scroll-hint { display: none; }
+  .hero-orb-1, .hero-orb-2, .hero-orb-3 { display: none; }
+  .floating-btns { bottom: 16px; right: 14px; }
+  .float-btn { width: 46px; height: 46px; font-size: 19px; }
+}
+
+/* ===== STICKY BAR mobile ===== */
+@media (max-width: 600px) {
+  .sticky-admit { flex-wrap: wrap; padding: 10px 16px; gap: 10px; }
+  .sticky-admit p { font-size: 12.5px; }
+}
+
+/* ===== INPUT AUTOFILL dark override ===== */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-2) inset !important;
+  -webkit-text-fill-color: var(--white) !important;
+  caret-color: var(--white);
+}
+
+/* ===== SELECTION COLOR ===== */
+::selection { background: rgba(59,130,246,0.35); color: var(--white); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-0); }
+::-webkit-scrollbar-thumb { background: var(--bg-4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--blue-700); }
+
+/* ===== FACILITY CARD — hover label ===== */
+.facility-card:hover .fac-tag {
+  background: rgba(6,182,212,0.25);
+  border-color: var(--cyan);
+  color: var(--cyan-light);
+}
+
+/* ===== CONTACT FORM focus ring ===== */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  background: var(--bg-3);
+}
+
+/* ===== SECTION ALT BACKGROUNDS ===== */
+.admissions { background: var(--bg-2); }
+.gallery { background: var(--bg-1); }
+
+/* ===== TESTI CARD gradient border on active ===== */
+.testi-card:first-child {
+  border-left: 2px solid var(--cyan);
+}
+
+/* ===== HERO STATS BAR — highlighted numbers ===== */
+.stat-item:hover .stat-num {
+  filter: brightness(1.2);
+}
+.stat-item:hover .stat-lbl {
+  color: var(--text);
+}
+
