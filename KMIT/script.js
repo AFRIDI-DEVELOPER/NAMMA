@@ -317,15 +317,39 @@ scrollSections.forEach(s => spyObs.observe(s));
 
 // ===== CONTACT FORM =====
 const contactForm = document.getElementById('contactForm');
-contactForm?.addEventListener('submit', e => {
+contactForm?.addEventListener('submit', async e => {
   e.preventDefault();
   const btn = contactForm.querySelector('button[type="submit"]');
   const orig = btn.innerHTML;
-  btn.innerHTML = '✅ Enquiry Submitted Successfully!';
-  btn.style.background = 'linear-gradient(135deg, #059669, #10b981)';
+
+  btn.innerHTML = 'Sending...';
   btn.disabled = true;
-  contactForm.reset();
-  setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.disabled = false; }, 4500);
+
+  const formData = new FormData(contactForm);
+  const data = Object.fromEntries(formData);
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const json = await res.json();
+
+    if (json.success) {
+      btn.innerHTML = '✅ Enquiry Submitted Successfully!';
+      btn.style.background = 'linear-gradient(135deg, #059669, #10b981)';
+      contactForm.reset();
+      setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; btn.disabled = false; }, 5000);
+    } else {
+      throw new Error(json.message || 'Submission failed');
+    }
+  } catch (err) {
+    btn.innerHTML = '❌ Failed. Please try again.';
+    btn.style.background = 'linear-gradient(135deg, #dc2626, #ef4444)';
+    btn.disabled = false;
+    setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; }, 4000);
+  }
 });
 
 // ===== PREVENT ANNOUNCE BAR TOP OFFSET on mobile =====
